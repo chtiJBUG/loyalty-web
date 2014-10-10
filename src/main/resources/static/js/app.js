@@ -30,7 +30,7 @@ productManagerModule.controller('productManagerController', function ($scope, $h
         for (i = 0; i < $scope.ticket.ticketLines.length; i++) {
             var aTicket=$scope.ticket.ticketLines[i];
             if (aTicket.product.id==ticketline.product.id){
-                $scope.ticket.ticketLines.splice(i,1);
+                $scope.ticketResult.ticketLines.splice(i,1);
             }
         };
 
@@ -38,8 +38,8 @@ productManagerModule.controller('productManagerController', function ($scope, $h
 
     $scope.addToShoppingCard = function (product) {
         var productItem = {
-            "Id": product.id,
-            "Name": product.productName,
+            "id": product.id,
+            "name": product.productName,
             "price": {
                 "price": product.price,
                 "currency": "EURO"
