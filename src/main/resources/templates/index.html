@@ -151,10 +151,10 @@
     <div class="col-md-1"></div>
 </div>
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
+    <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-body">
-                <div class="container">
+                <div class="container page-wrap ">
                     <div class="row top-row-20">
                         <table class="table table-bordered">
                             <tr>
@@ -164,7 +164,7 @@
                                 <td>{{ticketResult.amount}}</td>
                             </tr>
                             <tr>
-                                <td>Card Number :></td>
+                                <td>Card Number :</td>
                                 <td>{{ticketResult.loyaltyCard.number}}</td>
                                 <td>Card Name :</td>
                                 <td>{{ticketResult.loyaltyCard.name}}</td>
@@ -205,7 +205,7 @@
                                 <td>{{ticketline.product.name}}</td>
                                 <td>{{ticketline.product.price.price}}</td>
                                 <td>{{ticketline.quantity}}</td>
-                                <td>{{ticketline.price}}</td>
+                                <td>{{ticketline.lineTotal}}</td>
                                 <td>{{ticketline.op.nomOP}}</td>
                                 <td>{{ticketline.op.montantReduction}}</td>
                             </tr>

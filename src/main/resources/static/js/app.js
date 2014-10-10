@@ -30,7 +30,7 @@ productManagerModule.controller('productManagerController', function ($scope, $h
         for (i = 0; i < $scope.ticket.ticketLines.length; i++) {
             var aTicket=$scope.ticket.ticketLines[i];
             if (aTicket.product.id==ticketline.product.id){
-                $scope.ticketResult.ticketLines.splice(i,1);
+                $scope.ticket.ticketLines.splice(i,1);
             }
         };
 
