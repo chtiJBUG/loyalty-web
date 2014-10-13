@@ -70,6 +70,7 @@
   </properties>
 
   <build>
+    <finalName>loyalty-web</finalName>
     <plugins>
       <plugin>
         <groupId>org.springframework.boot</groupId>
@@ -89,7 +90,7 @@
             <configuration>
               <url>http://localhost:8080/loyalty-soap-server/service/calculateService?wsdl</url>
               <outputDirectory>${basedir}/target/resources/wsdl</outputDirectory>
-              <outputFileName>CalculateLoyaltyService.wsdl</outputFileName>
+              <outputFileName>CalculateChtijbugLoyaltyService.wsdl</outputFileName>
             </configuration>
           </execution>
         </executions>
@@ -106,7 +107,7 @@
               <wsdlRoot>${basedir}/target/resources/wsdl</wsdlRoot>
               <wsdlOptions>
                 <wsdlOption>
-                  <wsdl>${basedir}/target/resources/wsdl/CalculateLoyaltyService.wsdl</wsdl>
+                  <wsdl>${basedir}/target/resources/wsdl/CalculateChtijbugLoyaltyService.wsdl</wsdl>
                   <extraargs>
                     <extraarg>-client</extraarg>
                   </extraargs>

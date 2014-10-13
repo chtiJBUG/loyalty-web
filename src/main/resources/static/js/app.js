@@ -81,7 +81,7 @@ productManagerModule.controller('productManagerController', function ($scope, $h
         };
         //get all tasks and display initially
         var searchElement = $scope.productSearch;
-        $http.get(urlBase + '/products/search/findByProductNameStartingWith?name=' + searchElement, config).
+        $http.get(urlBase + '/loyalty-web/products/search/findByProductNameStartingWith?name=' + searchElement, config).
                 success(function (data) {
                     for (i = 0; i < data._embedded.products.length; i++) {
                         var aProduct = data._embedded.products[i];
@@ -97,7 +97,7 @@ productManagerModule.controller('productManagerController', function ($scope, $h
 
     $scope.calculateLoyalty = function () {
         var myTicket = $scope.ticket;
-        $http.put(urlBase + "/ticket/calculate", myTicket).success(function (data) {
+        $http.put(urlBase + "/loyalty-web/ticket/calculate", myTicket).success(function (data) {
             $scope.ticketResult = data;
         })
     }
