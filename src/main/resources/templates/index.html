@@ -160,7 +160,7 @@
                             <table class="table table-bordered">
                                 <tr>
                                     <td>Date of ticket :</td>
-                                    <td>{{ticketResult.dateTicket}}</td>
+                                    <td>{{ticketResult.dateTicket | date : 'dd-MM-yyyy' }} |</td>
                                     <td>Ticket amount :</td>
                                     <td>{{ticketResult.amount}}</td>
                                 </tr>
@@ -183,10 +183,10 @@
                                     <td>{{ticketResult.loyaltyCard.customer.maritalName}}</td>
                                 </tr>
                                 <tr>
-                                    <td>Customer gender :></td>
+                                    <td>Customer gender :</td>
                                     <td>{{ticketResult.loyaltyCard.customer.gender}}</td>
                                     <td>Customer birthdate :</td>
-                                    <td>{{ticketResult.loyaltyCard.customer.birthDate}}</td>
+                                    <td>{{ticketResult.loyaltyCard.customer.birthDate | date : 'dd-MM-yyyy'}}</td>
                                 </tr>
                             </table>
                         </div>
