@@ -154,62 +154,66 @@
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-body">
-                <div class="container page-wrap ">
+                <div class="page-wrap ">
                     <div class="row top-row-20">
-                        <table class="table table-bordered">
-                            <tr>
-                                <td>Date of ticket :</td>
-                                <td>{{ticketResult.dateTicket}}</td>
-                                <td>Ticket amount :</td>
-                                <td>{{ticketResult.amount}}</td>
-                            </tr>
-                            <tr>
-                                <td>Card Number :</td>
-                                <td>{{ticketResult.loyaltyCard.number}}</td>
-                                <td>Card Name :</td>
-                                <td>{{ticketResult.loyaltyCard.name}}</td>
-                            </tr>
-                            <tr>
-                                <td>Customer ID :</td>
-                                <td>{{ticketResult.loyaltyCard.customer.customerID}}</td>
-                                <td>Customer surname :</td>
-                                <td>{{ticketResult.loyaltyCard.customer.surName}}</td>
-                            </tr>
-                            <tr>
-                                <td>Customer name :</td>
-                                <td>{{ticketResult.loyaltyCard.customer.name}}</td>
-                                <td>Customer marital name :</td>
-                                <td>{{ticketResult.loyaltyCard.customer.maritalName}}</td>
-                            </tr>
-                            <tr>
-                                <td>Customer gender :></td>
-                                <td>{{ticketResult.loyaltyCard.customer.gender}}</td>
-                                <td>Customer birthdate :</td>
-                                <td>{{ticketResult.loyaltyCard.customer.birthDate}}</td>
-                            </tr>
-                        </table>
+                        <div class="col-md-12">
+                            <table class="table table-bordered">
+                                <tr>
+                                    <td>Date of ticket :</td>
+                                    <td>{{ticketResult.dateTicket}}</td>
+                                    <td>Ticket amount :</td>
+                                    <td>{{ticketResult.amount}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Card Number :</td>
+                                    <td>{{ticketResult.loyaltyCard.number}}</td>
+                                    <td>Card Name :</td>
+                                    <td>{{ticketResult.loyaltyCard.name}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Customer ID :</td>
+                                    <td>{{ticketResult.loyaltyCard.customer.customerID}}</td>
+                                    <td>Customer surname :</td>
+                                    <td>{{ticketResult.loyaltyCard.customer.surName}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Customer name :</td>
+                                    <td>{{ticketResult.loyaltyCard.customer.name}}</td>
+                                    <td>Customer marital name :</td>
+                                    <td>{{ticketResult.loyaltyCard.customer.maritalName}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Customer gender :></td>
+                                    <td>{{ticketResult.loyaltyCard.customer.gender}}</td>
+                                    <td>Customer birthdate :</td>
+                                    <td>{{ticketResult.loyaltyCard.customer.birthDate}}</td>
+                                </tr>
+                            </table>
+                        </div>
                     </div>
                     <div class="row top-row-20">
-                        <table class="table table-bordered">
-                            <tr>
-                                <th>#</th>
-                                <th>product name</th>
-                                <th>product price</th>
-                                <th>quantity</th>
-                                <th>Line Total</th>
-                                <th>Operation name</th>
-                                <th>Operation reduction</th>
-                            </tr>
-                            <tr ng-repeat="ticketline in ticketResult.ticketLines">
-                                <td>{{ticketline.product.id}}</td>
-                                <td>{{ticketline.product.name}}</td>
-                                <td>{{ticketline.product.price.price}}</td>
-                                <td>{{ticketline.quantity}}</td>
-                                <td>{{ticketline.lineTotal}}</td>
-                                <td>{{ticketline.op.nomOP}}</td>
-                                <td>{{ticketline.op.montantReduction}}</td>
-                            </tr>
-                        </table>
+                        <div class="col-md-12">
+                            <table class="table table-bordered">
+                                <tr>
+                                    <th>#</th>
+                                    <th>product name</th>
+                                    <th>product price</th>
+                                    <th>quantity</th>
+                                    <th>Line Total</th>
+                                    <th>Operation name</th>
+                                    <th>Operation reduction</th>
+                                </tr>
+                                <tr ng-repeat="ticketline in ticketResult.ticketLines">
+                                    <td>{{ticketline.product.id}}</td>
+                                    <td>{{ticketline.product.name}}</td>
+                                    <td>{{ticketline.product.price.price}}</td>
+                                    <td>{{ticketline.quantity}}</td>
+                                    <td>{{ticketline.lineTotal}}</td>
+                                    <td>{{ticketline.op.nomOP}}</td>
+                                    <td>{{ticketline.op.montantReduction}}</td>
+                                </tr>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>
