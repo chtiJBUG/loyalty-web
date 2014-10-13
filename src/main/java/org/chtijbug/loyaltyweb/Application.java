@@ -17,6 +17,7 @@ package org.chtijbug.loyaltyweb;
 
 import loyalty.service.IServiceCalculate;
 import org.apache.cxf.jaxws.JaxWsProxyFactoryBean;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.context.annotation.*;
@@ -35,11 +36,12 @@ public class Application {
         SpringApplication.run(Application.class, args);
     }
 
-
+    @Value(value="${url.loyalty.calculate}")
+    private String url;
     @Bean
     public IServiceCalculate serviceCalculate() {
         JaxWsProxyFactoryBean factory = new JaxWsProxyFactoryBean();
-        factory.setAddress("http://localhost:8080/loyalty-soap-server/service/calculateService");
+        factory.setAddress(url);
         factory.setServiceClass(IServiceCalculate.class);
         return (IServiceCalculate) factory.create();
 
