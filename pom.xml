@@ -18,6 +18,37 @@
     <!-- lookup parent from repository -->
   </parent>
 
+
+  <licenses>
+    <license>
+      <name>The Apache Software License, Version 2.0</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+  <developers>
+    <developer>
+      <id>nheron</id>
+      <name>Nicolas Héron</name>
+      <email>nicolas.heron@chtijbug.org</email>
+    </developer>
+    <developer>
+      <id>smangot</id>
+      <name>Samuel Mangot</name>
+      <email>samuel.mangot@pymma-software.com</email>
+    </developer>
+  </developers>
+
+  <scm>
+    <connection>scm:git:git@bitbucket.org:pymma/loyalty-web.git</connection>
+    <url>scm:git:git@bitbucket.org:pymma/loyalty-web.git</url>
+    <developerConnection>scm:git:git@bitbucket.org:pymma/loyalty-web.git</developerConnection>
+  </scm>
+  <issueManagement>
+    <system>Jira</system>
+    <url>https://chtijbug.atlassian.net/</url>
+  </issueManagement>
+
   <dependencies>
 
     <dependency>
@@ -67,7 +98,39 @@
     <start-class>org.chtijbug.loyaltyweb.Application</start-class>
     <java.version>1.7</java.version>
     <cxf.version>2.7.11</cxf.version>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <sonatypeOssDistMgmtSnapshotsUrl>https://oss.sonatype.org/content/repositories/snapshots/
+    </sonatypeOssDistMgmtSnapshotsUrl>
+
   </properties>
+
+  <repositories>
+    <repository>
+      <id>sonatype-nexus-snapshots</id>
+      <name>Sonatype Nexus Snapshots</name>
+      <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+      <releases>
+        <enabled>false</enabled>
+      </releases>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
+    </repository>
+  </repositories>
+
+
+  <distributionManagement>
+    <snapshotRepository>
+      <id>sonatype-nexus-snapshots</id>
+      <name>Sonatype Nexus Snapshots</name>
+      <url>${sonatypeOssDistMgmtSnapshotsUrl}</url>
+    </snapshotRepository>
+    <repository>
+      <id>sonatype-nexus-staging</id>
+      <name>Nexus Release Repository</name>
+      <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+    </repository>
+  </distributionManagement>
 
   <build>
     <finalName>loyalty-web</finalName>
