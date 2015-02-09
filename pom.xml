@@ -151,7 +151,7 @@
             </goals>
             <phase>validate</phase>
             <configuration>
-              <url>http://localhost:8080/loyalty-soap-server/service/calculateService?wsdl</url>
+              <url>http://192.168.1.13:10080/loyalty-soap-server/service/calculateService?wsdl</url>
               <outputDirectory>${basedir}/target/resources/wsdl</outputDirectory>
               <outputFileName>CalculateChtijbugLoyaltyService.wsdl</outputFileName>
             </configuration>
